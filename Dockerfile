@@ -2,6 +2,8 @@ FROM phusion/passenger-ruby26:1.0.11
 
 # Provide pdf2htmlEX
 RUN sed -i 's/# deb-src/deb-src/g' /etc/apt/sources.list && \
+    apt-get update ; \
+    apt-get install -yy ca-certificates && \
     apt-get update && \
     apt-get build-dep -yy libpoppler73 && \
     apt-get install -yy wget git xz-utils libpango1.0-dev m4 libtool libltdl-dev perl \
