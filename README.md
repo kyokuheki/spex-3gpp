@@ -67,6 +67,10 @@ spex:webapp$ bundle exec rake db:setup
 spex:webapp$ bundle exec /home/app/webapp/script/init_3gpp.rb
 ```
 
+```
+host:~$ docker-compose exec spex chown -R app:app /home/app/webapp/specs
+```
+
 The spex website is now available on `http://localhost:3000`
 
 ### Using rake (development)
